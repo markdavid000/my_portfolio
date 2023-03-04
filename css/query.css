@@ -1,0 +1,157 @@
+@media (max-width: 1200px) {
+  html {
+    font-size: 55%;
+  }
+}
+
+@media (max-width: 1144px) {
+  .header {
+    padding: 2rem 3%;
+  }
+
+  section {
+    padding: 10rem 3% 2rem;
+  }
+
+  .footer {
+    padding: 2rem 3%;
+  }
+}
+
+@media (max-width: 1027px) {
+  .portfolio_container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 806px) {
+  .header {
+    padding: 2rem 3%;
+  }
+
+  section {
+    padding: 10rem 3% 2rem;
+  }
+
+  .footer {
+    padding: 2rem 3%;
+  }
+
+  .btn-mobile-nav {
+    display: block;
+    z-index: 1000;
+  }
+
+  .navbar {
+    background-color: var(--bg-color);
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(20px);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100vh;
+    transform: translateX(-100%);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.5s ease-in;
+
+    opacity: 0;
+
+    pointer-events: none;
+
+    visibility: hidden;
+  }
+
+  .nav-open .navbar {
+    opacity: 1;
+
+    pointer-events: auto;
+
+    visibility: visible;
+
+    transform: translateX(0);
+  }
+
+  .nav-open .icon-mobile-nav.close {
+    display: block;
+  }
+  .nav-open .icon-mobile-nav.menu {
+    display: none;
+  }
+
+  .navbar {
+    display: flex;
+    flex-direction: column;
+    font-size: 2rem;
+    gap: 4.8rem;
+  }
+
+  .home {
+    flex-direction: column;
+    margin-top: 3rem !important;
+  }
+
+  .home_content h3 {
+    font-size: 2.6rem;
+  }
+  .home_content h1 {
+    font-size: 5rem;
+  }
+
+  .home_img img {
+    width: 100%;
+  }
+
+  .about {
+    flex-direction: column-reverse;
+  }
+
+  .about_img img {
+    width: 55vw;
+  }
+
+  .skills h2 {
+    margin-bottom: 3rem;
+  }
+
+  .portfolio h2 {
+    margin-bottom: 3rem;
+  }
+
+  .contact form .input_box input {
+    width: 100%;
+  }
+
+  .contact form {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+@media (max-width: 694px) {
+  .portfolio_container {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 450px) {
+  html {
+    font-size: 50%;
+  }
+
+  section {
+    min-height: 80vh;
+  }
+
+  .footer {
+    flex-direction: column-reverse;
+  }
+
+  .footer_text p {
+    text-align: center;
+    margin-top: 2rem;
+  }
+}
