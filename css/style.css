@@ -231,7 +231,7 @@ span {
 }
 
 .about_img img {
-  /* margin-top: 5rem; */
+  margin-top: 5rem;
   width: 30vw;
   border-radius: 50%;
   box-shadow: 0 0 1rem var(--main-color);
