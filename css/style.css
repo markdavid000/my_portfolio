@@ -232,7 +232,8 @@ span {
 
 .about_img img {
   margin-top: 5rem;
-  width: 30vw;
+  width: 400px;
+  height: 400px;
   border-radius: 50%;
   box-shadow: 0 0 1rem var(--main-color);
   animation: floatImage 2s ease-in-out infinite;
