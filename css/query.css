@@ -109,7 +109,9 @@
     flex-direction: column-reverse;
   }
 
-  .about_img img {
+  .about_img {
+    margin-left: 2rem;
+    margin-right: 2rem;
   }
 
   .skills h2 {
