@@ -14,11 +14,9 @@
 
 :root {
   --alpha-color: #0000009c;
-  --alpha-main: #ffae00af;
   --bg-color: #000;
   --second-bg-color: #1f242d;
   --text-color: #fff;
-  --main-color: #ffae00;
 }
 
 html {

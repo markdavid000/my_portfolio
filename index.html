@@ -14,8 +14,21 @@
     <!-- SWIPER CSS -->
     <link rel="stylesheet" href="css/swiper-bundle.min.css">
 
+    <!-- SWITCHER CSS -->
+    <link rel="stylesheet" href="css/style-switcher.css">
+
+    <!-- SWITCHER CSS -->
+    <link rel="stylesheet" href="css/skins/color-1.css">
+
+    <!-- SWITCHER CSS -->
+    <link rel="stylesheet" href="css/skins/color-1.css" class="alternate-style" title="color-1" disabled>
+    <link rel="stylesheet" href="css/skins/color-2.css" class="alternate-style" title="color-2" disabled>
+    <link rel="stylesheet" href="css/skins/color-3.css" class="alternate-style" title="color-3" disabled>
+    <link rel="stylesheet" href="css/skins/color-4.css" class="alternate-style" title="color-4" disabled>
+    <link rel="stylesheet" href="css/skins/color-5.css" class="alternate-style" title="color-5" disabled>
+
     <!-- FAVICON LINK -->
-    <link rel="shortcut icon" href="img/laptop-screen.png" type="image/x-icon">
+    <link rel="shortcut icon" href="img/fotor_2023-3-4_19_37_39.png" type="image/x-icon">
 
     <!-- ION ICONS -->
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
@@ -39,7 +52,7 @@
             <i class="ri-close-circle-line icon-mobile-nav close"></i>
         </button>
 
-        <a href="" class="logo">Mark's<img src="img/laptop-screen.png" alt="" width="50"><span>Tech</span></a>
+        <a href="" class="logo">Mark's<img src="img/fotor_2023-3-4_19_37_39.png" alt="" width="50"><span>Tech</span></a>
 
         <nav class="navbar">
             <a href="#home" class="active">Home</a>
@@ -228,6 +241,20 @@
         </form>
     </section>
 
+    <div class="style-switcher">
+        <div class="style-switcher-toggler s-icon">
+            <i class="fas fa-cog fa-spin font"></i>
+        </div>
+        <h4>Theme Colors</h4>
+        <div class="colors">
+            <span class="color-1" onClick="setActiveStyle('color-1')"></span>
+            <span class="color-2" onClick="setActiveStyle('color-2')"></span>
+            <span class="color-3" onClick="setActiveStyle('color-3')"></span>
+            <span class="color-4" onClick="setActiveStyle('color-4')"></span>
+            <span class="color-5" onClick="setActiveStyle('color-5')"></span>
+        </div>
+    </div>
+
     <!-- FOOTER DESIGN -->
     <footer class="footer">
         <div class="footer_text">
@@ -249,6 +276,9 @@
 
     <!-- SWIPER JS -->
     <script src="js/swiper-bundle.min.js"></script>
+
+    <!-- SWITCHER JS -->
+    <script src="js/style-switcher.js"></script>
 
     <!-- APP JS -->
     <script src="js/app.js"></script>
