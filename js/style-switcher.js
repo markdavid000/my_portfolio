@@ -10,7 +10,7 @@ window.addEventListener('scroll', () => {
 });
 
 const alternateStyles = document.querySelectorAll('.alternate-style');
-const setActiveStyle = color => {
+function setActiveStyle(color) {
   alternateStyles.forEach(style => {
     if (color === style.getAttribute('title')) {
       style.removeAttribute('disabled');
@@ -18,4 +18,4 @@ const setActiveStyle = color => {
       style.setAttribute('disabled', 'true');
     }
   });
-};
+}
