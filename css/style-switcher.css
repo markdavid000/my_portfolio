@@ -12,6 +12,10 @@
   border-radius: 5px;
 }
 
+.light-mode .style-switcher {
+  background-color: #dfdfdf9c;
+}
+
 .style-switcher.open {
   transform: translateX(-25px);
   padding-left: 0;
@@ -29,12 +33,22 @@
   height: 30px;
   border-radius: 50%;
   backdrop-filter: blur(5px);
+  transition: all 0.5s ease-in;
+}
+
+.light-mode .style-switcher .s-icon {
+  background: #dfdfdf9c;
 }
 
 .font {
   font-size: 2rem !important;
   color: var(--text-color);
   margin-top: 5px;
+  transition: all 0.5s ease-in;
+}
+
+.light-mode .font {
+  color: var(--bg-color);
 }
 
 .style-switcher .s-icon {

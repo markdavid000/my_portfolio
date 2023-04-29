@@ -10,12 +10,19 @@ window.addEventListener('scroll', () => {
 });
 
 const alternateStyles = document.querySelectorAll('.alternate-style');
-const setActiveStyle = (color) => {
-  alternateStyles.forEach((style) => {
+const setActiveStyle = color => {
+  alternateStyles.forEach(style => {
     if (color === style.getAttribute('title')) {
       style.removeAttribute('disabled');
     } else {
       style.setAttribute('disabled', 'true');
     }
   });
+
+  localStorage.setItem('selectedColor', color);
+};
+
+const selectedColor = localStorage.getItem('selectedColor');
+if (selectedColor) {
+  setActiveStyle(selectedColor);
 }

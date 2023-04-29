@@ -17,6 +17,7 @@
   --bg-color: #000;
   --second-bg-color: #1f242d;
   --text-color: #fff;
+  --alpha-color-light: #ffffff9c;
 }
 
 html {
@@ -30,6 +31,12 @@ body {
   color: var(--text-color);
   position: relative;
   overflow-x: hidden;
+  transition: all 0.5s ease-in;
+}
+
+body.light-mode {
+  background-color: #f5f5f59c;
+  color: var(--bg-color) !important;
 }
 
 section {
@@ -64,10 +71,20 @@ section {
   align-items: center;
   z-index: 100;
   backdrop-filter: blur(5px);
+  transition: all 0.5s ease-in;
+  box-shadow: 0px 4px 28px -8px rgba(0, 0, 0, 0.75);
+}
+
+.light-mode .header {
+  background-color: #f5f5f59c;
 }
 
 .header.sticky {
   border-bottom: 0.1rem solid rgba(0, 0, 0, 0.2);
+}
+
+.light-mode .header.sticky {
+  border-bottom: 0.1rem solid rgba(255, 255, 255, 0.2);
 }
 
 .logo {
@@ -78,21 +95,73 @@ section {
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: all 0.5s ease-in;
 }
 
-.navbar a {
+.light-mode .logo {
+  color: var(--bg-color);
+}
+
+.nav {
   font-size: 1.7rem;
-  color: var(--text-color);
   margin-left: 2rem;
   transition: 0.3s;
   padding: 1rem 2rem;
-  border-radius: 5px;
+  z-index: 1000;
+  color: var(--text-color);
+  position: relative;
 }
 
-.navbar a:hover,
+.nav:hover {
+  color: var(--main-color);
+}
+
+.nav::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-bottom: 2px solid var(--main-color);
+  z-index: -1;
+  transition: transform 0.5s;
+  transition-timing-function: cubic-bezier(0.5, 1.6, 0.4, 0.7);
+}
+
+.nav1::before {
+  transform: scaleX(0);
+}
+
+.nav1:hover::before {
+  transform: scaleX(1);
+  color: var(--main-color) !important;
+}
+
+.light-mode .navbar a {
+  color: var(--bg-color);
+}
+
 .navbar a.active {
   color: var(--main-color);
-  box-shadow: 0 0 1rem var(--main-color);
+  border-bottom: 2px solid var(--main-color);
+}
+
+#mode-toggler {
+  background: none;
+  transition: all 0.5s ease-in;
+  vertical-align: middle;
+  cursor: pointer;
+}
+
+#mode-toggler::after {
+  content: url(../img/sun-fill.svg);
+  transition: all 0.5s ease-in;
+}
+
+.light-mode #mode-toggler::after {
+  content: url(../img/moon-fill.svg);
+  transition: all 0.5s ease-in;
 }
 
 .btn-mobile-nav {
@@ -105,6 +174,12 @@ section {
 .icon-mobile-nav {
   font-size: 4.8rem;
   color: var(--text-color);
+  transition: all 0.5s ease-in;
+}
+
+.light-mode .icon-mobile-nav {
+  font-size: 4.8rem;
+  color: var(--bg-color);
 }
 
 .icon-mobile-nav.close {
@@ -281,7 +356,13 @@ span {
   text-align: center;
   border: 0.2rem solid var(--bg-color);
   padding: 3rem 2rem 4rem;
-  transition: all 0.5s ease;
+  transition: all 0.5s ease-in !important;
+}
+
+.light-mode .card {
+  background: #dfdfdf9c;
+  border: 0.2rem solid var(--text-color);
+  transition: all 0.5s ease-in;
 }
 
 .card:hover {
@@ -336,7 +417,16 @@ span {
   opacity: 1 !important;
 }
 
+.light-mode .swiper-pagination-bullet {
+  background-color: var(--bg-color) !important;
+}
+
 .swiper-pagination-bullet-active {
+  background-color: var(--main-color) !important;
+  opacity: 1;
+}
+
+.light-mode .swiper-pagination-bullet-active {
   background-color: var(--main-color) !important;
   opacity: 1;
 }
@@ -344,7 +434,6 @@ span {
 /* PORTFOLIO STYLE */
 
 .portfolio {
-  background: var(--bg-color);
   padding-bottom: 7rem;
 }
 
@@ -400,6 +489,7 @@ span {
 }
 
 .portfolio_layer h4 {
+  color: var(--text-color);
   font-size: 2rem;
 }
 
@@ -453,6 +543,13 @@ span {
   background: var(--second-bg-color);
   border-radius: 0.8rem;
   margin: 0.7rem 0;
+  transition: all 0.5s ease-in;
+}
+
+.light-mode .contact form .input_box input,
+.light-mode .contact form textarea {
+  color: var(--bg-color);
+  background: #dfdfdf9c;
 }
 
 .contact form .input_box input {

@@ -86,3 +86,10 @@ const typed = new Typed('.multiple_text', {
   backDelay: 1000,
   loop: true,
 });
+
+const modeToggler = document.getElementById('mode-toggler');
+const body = document.body;
+
+modeToggler.addEventListener('click', () => {
+  body.classList.toggle('light-mode');
+});
