@@ -22,7 +22,7 @@ const setActiveStyle = color => {
   localStorage.setItem('selectedColor', color);
 };
 
-const selectedColor = localStorage.getItem('selectedColor');
-if (selectedColor) {
-  setActiveStyle(selectedColor);
-}
+// const selectedColor = localStorage.getItem('selectedColor');
+// if (selectedColor) {
+//   setActiveStyle(selectedColor);
+// }

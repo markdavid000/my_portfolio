@@ -77,15 +77,7 @@ section {
 
 .light-mode .header {
   background-color: #f5f5f5;
-  box-shadow: 0px 4px 28px -8px rgba(105, 105, 105, 0.521);
-}
-
-.header.sticky {
-  border-bottom: 0.1rem solid rgba(0, 0, 0, 0.2);
-}
-
-.light-mode .header.sticky {
-  border-bottom: 0.1rem solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0px 4px 28px -8px rgba(105, 105, 105, 0.2);
 }
 
 .logo {
@@ -114,6 +106,10 @@ section {
 }
 
 .nav:hover {
+  color: var(--main-color);
+}
+
+.light-mode .nav:hover {
   color: var(--main-color);
 }
 
