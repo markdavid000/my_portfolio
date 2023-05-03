@@ -71,16 +71,28 @@ ScrollReveal({
 
 ScrollReveal().reveal('.home_content, .heading', { origin: 'top' });
 ScrollReveal().reveal(
-  '.home_img, .slide-container, .portfolio_box, .portfolio_btn, .contact form',
+  '.home_img, .slide-container, .portfolio_box, .portfolio_btn',
   {
     origin: 'bottom',
   }
 );
-ScrollReveal().reveal('.home_content h1, .about_img', { origin: 'left' });
-ScrollReveal().reveal('.home_content p, .about_content', { origin: 'right' });
+ScrollReveal().reveal('.home_content h1, .about_img, .contact form .btn', {
+  origin: 'left',
+});
+ScrollReveal().reveal('.home_content p, .about_content, .contact form', {
+  origin: 'right',
+});
 
 const typed = new Typed('.multiple_text', {
   strings: ['Frontend Developer', 'Web Developer', 'Frontend Designer'],
+  typeSpeed: 100,
+  backSpeed: 100,
+  backDelay: 1000,
+  loop: true,
+});
+
+const type = new Typed('.wlc_txt', {
+  strings: ['WELCOME!'],
   typeSpeed: 100,
   backSpeed: 100,
   backDelay: 1000,
@@ -92,4 +104,16 @@ const body = document.body;
 
 modeToggler.addEventListener('click', () => {
   body.classList.toggle('light-mode');
+});
+
+window.addEventListener('load', () => {
+  setTimeout(() => {
+    const loader = document.querySelector('.loader');
+
+    loader.classList.add('loader_hidden');
+
+    loader.addEventListener('transitionend', () => {
+      document.body.removeChild(loader);
+    });
+  }, 5000);
 });

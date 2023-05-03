@@ -71,6 +71,7 @@
   width: 20px;
   height: 20px;
   border-radius: 50%;
+  cursor: pointer;
 }
 
 .style-switcher .color-1 {
@@ -86,5 +87,5 @@
   background: #0bc76f;
 }
 .style-switcher .color-5 {
-  background: #00f7ff;
+  background: #1849ec;
 }

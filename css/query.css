@@ -144,15 +144,17 @@
   section {
     min-height: 80vh;
   }
+
+  .footer {
+    flex-direction: column-reverse;
+    justify-content: center;
+    gap: 3rem;
+  }
 }
 
 @media (max-width: 450px) {
   html {
     font-size: 50%;
-  }
-
-  .footer {
-    flex-direction: column-reverse;
   }
 
   .footer_text p {
