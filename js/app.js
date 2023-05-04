@@ -98,9 +98,9 @@ const type = new Typed('.wlc_txt', {
     'and',
     'User experience meets functionality',
   ],
-  typeSpeed: 100,
-  backSpeed: 100,
-  backDelay: 1000,
+  typeSpeed: 30,
+  backSpeed: 30,
+  backDelay: 800,
   loop: true,
 });
 
@@ -120,5 +120,5 @@ window.addEventListener('load', () => {
     loader.addEventListener('transitionend', () => {
       document.body.removeChild(loader);
     });
-  }, 22000);
+  }, 10000);
 });

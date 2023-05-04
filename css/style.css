@@ -673,5 +673,5 @@ span {
   text-align: center;
   -webkit-box-reflect: below 1px linear-gradient(transparent, #0000001f);
   line-height: 1em;
-  text-shadow: 0 0 10px #fff, 0 0 20px #fff;
+  text-shadow: 0 0 5px #fff, 0 0 10px #fff;
 }
