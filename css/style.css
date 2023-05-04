@@ -306,7 +306,7 @@ span {
 
 .about_img img {
   width: 100%;
-  height: 500px;
+  height: 100%;
   border-radius: 50%;
   box-shadow: 0 0 1rem var(--main-color);
   animation: floatImage 2s ease-in-out infinite;
