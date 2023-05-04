@@ -661,6 +661,7 @@ span {
   justify-content: center;
   background: var(--bg-color);
   transition: opacity 0.75s, visibility 0.75s;
+  overflow: hidden;
 }
 
 .loader_hidden {
@@ -674,4 +675,8 @@ span {
   -webkit-box-reflect: below 1px linear-gradient(transparent, #0000001f);
   line-height: 1em;
   text-shadow: 0 0 5px #fff, 0 0 10px #fff;
+}
+
+#matrix {
+  position: fixed;
 }
