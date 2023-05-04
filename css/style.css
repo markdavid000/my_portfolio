@@ -300,9 +300,13 @@ span {
   padding-bottom: 7rem;
 }
 
+.about_img {
+  width: 100%;
+}
+
 .about_img img {
   width: 100%;
-  height: 100%;
+  height: 500px;
   border-radius: 50%;
   box-shadow: 0 0 1rem var(--main-color);
   animation: floatImage 2s ease-in-out infinite;
@@ -578,12 +582,6 @@ span {
   font-size: 1.6rem;
 }
 
-.footer_iconTop {
-  display: flex;
-  justify-content: end;
-  padding: 3rem 5%;
-}
-
 .footer_iconTop a {
   display: inline-flex;
   justify-content: center;
@@ -623,41 +621,31 @@ span {
 
 .footer_links {
   display: flex;
-  gap: 4rem;
+  gap: 3rem;
+  margin-bottom: 3rem;
 }
 
 .footer_link {
-  display: flex;
+  display: inline-flex;
+  justify-content: center;
   align-items: center;
-  font-size: 1.2rem;
-  gap: 0.5rem;
-  color: var(--text-color);
-  transition: all 0.4s ease-in-out;
-}
-
-.light-mode .footer_link:hover,
-.light-mode .footer_link:hover svg path {
+  width: 4rem;
+  height: 4rem;
+  background: transparent;
+  border: 0.2rem solid var(--main-color);
+  border-radius: 50%;
+  font-size: 2rem;
   color: var(--main-color);
-  fill: var(--main-color);
+  box-shadow: 0 0 1rem var(--main-color);
+  margin: 1.5rem 1.5rem 1.5rem 0 !important;
+  transition: all 0.5s ease;
 }
 
-.footer_link:hover,
-.footer_link:hover svg path {
-  color: var(--main-color);
-  fill: var(--main-color);
-}
-
-.light-mode .footer_link {
-  color: var(--bg-color);
-}
-
-.footer_link svg path {
-  fill: #fff;
-  transition: all 0.4s ease-in-out;
-}
-
-.light-mode .footer_link svg path {
-  fill: #000;
+.footer_link:hover {
+  background-color: var(--main-color);
+  color: var(--second-bg-color);
+  box-shadow: 0 0 1rem var(--main-color);
+  transform: rotate(360deg);
 }
 
 /* LOADER STYLE */
@@ -682,7 +670,8 @@ span {
 
 .wlc_txt {
   font-size: 4rem !important;
-  -webkit-box-reflect: below 1px linear-gradient(transparent, #0000002c);
-  line-height: 0.7em;
+  text-align: center;
+  -webkit-box-reflect: below 1px linear-gradient(transparent, #0000001f);
+  line-height: 1em;
   text-shadow: 0 0 10px #fff, 0 0 20px #fff;
 }

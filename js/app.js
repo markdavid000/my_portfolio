@@ -92,7 +92,12 @@ const typed = new Typed('.multiple_text', {
 });
 
 const type = new Typed('.wlc_txt', {
-  strings: ['WELCOME!'],
+  strings: [
+    'WELCOME TO MY PORTFOLIO',
+    'Where design meets code',
+    'and',
+    'User experience meets functionality',
+  ],
   typeSpeed: 100,
   backSpeed: 100,
   backDelay: 1000,
@@ -115,5 +120,5 @@ window.addEventListener('load', () => {
     loader.addEventListener('transitionend', () => {
       document.body.removeChild(loader);
     });
-  }, 5000);
+  }, 22000);
 });

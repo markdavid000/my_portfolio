@@ -29,8 +29,8 @@
   cursor: pointer;
   transition: all 0.3s ease;
   background: var(--alpha-color);
-  width: 30px;
-  height: 30px;
+  width: 35px;
+  height: 35px;
   border-radius: 50%;
   backdrop-filter: blur(5px);
   transition: all 0.5s ease-in;
@@ -41,7 +41,7 @@
 }
 
 .font {
-  font-size: 2rem !important;
+  font-size: 2.5rem !important;
   color: var(--text-color);
   margin-top: 5px;
   transition: all 0.5s ease-in;
