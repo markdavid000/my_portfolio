@@ -98,8 +98,8 @@ const type = new Typed('.wlc_txt', {
     'and',
     'User experience meets functionality',
   ],
-  typeSpeed: 30,
-  backSpeed: 30,
+  typeSpeed: 40,
+  backSpeed: 40,
   backDelay: 800,
   loop: true,
 });
