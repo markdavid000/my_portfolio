@@ -70,12 +70,9 @@ ScrollReveal({
 });
 
 ScrollReveal().reveal('.home_content, .heading', { origin: 'top' });
-ScrollReveal().reveal(
-  '.home_img, .slide-container, .portfolio_box, .portfolio_btn',
-  {
-    origin: 'bottom',
-  }
-);
+ScrollReveal().reveal('.home_img, .container, .portfolio_box, .portfolio_btn', {
+  origin: 'bottom',
+});
 ScrollReveal().reveal('.home_content h1, .about_img, .contact form .btn', {
   origin: 'left',
 });
@@ -92,15 +89,10 @@ const typed = new Typed('.multiple_text', {
 });
 
 const type = new Typed('.wlc_txt', {
-  strings: [
-    'WELCOME TO MY PORTFOLIO',
-    'Where design meets code',
-    'and',
-    'User experience meets functionality',
-  ],
-  typeSpeed: 40,
-  backSpeed: 40,
-  backDelay: 800,
+  strings: ['WELCOME TO MY PORTFOLIO', 'Where Designs Meet Code '],
+  typeSpeed: 30,
+  backSpeed: 30,
+  backDelay: 1000,
   loop: true,
 });
 
@@ -120,7 +112,7 @@ window.addEventListener('load', () => {
     loader.addEventListener('transitionend', () => {
       document.body.removeChild(loader);
     });
-  }, 10000);
+  }, 5000);
 });
 
 const canvas = document.getElementById('matrix');
