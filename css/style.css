@@ -310,6 +310,8 @@ span {
   border-radius: 50%;
   box-shadow: 0 0 1rem var(--main-color);
   animation: floatImage 2s ease-in-out infinite;
+  object-fit: cover;
+  object-position: right center;
 }
 
 .heading {
@@ -663,17 +665,26 @@ span {
   overflow: hidden;
 }
 
+.light-mode .loader {
+  background: #f5f5f5;
+}
+
 .loader_hidden {
   opacity: 0;
   visibility: hidden;
 }
 
 .wlc_txt {
+  color: var(--text-color);
   font-size: 4rem !important;
   text-align: center;
   -webkit-box-reflect: below 1px linear-gradient(transparent, #0000001f);
   line-height: 1em;
   text-shadow: 0 0 5px #fff, 0 0 10px #fff;
+}
+
+.light-mode .wlc_txt {
+  color: var(--bg-color);
 }
 
 #matrix {
