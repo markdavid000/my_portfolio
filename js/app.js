@@ -37,6 +37,12 @@ btnNavEl.addEventListener('click', function () {
   headerEl.classList.toggle('nav-open');
 });
 
+window.addEventListener('scroll', () => {
+  if (headerEl.classList.contains('nav-open')) {
+    headerEl.classList.remove('nav-open');
+  }
+});
+
 let sections = document.querySelectorAll('section');
 let navLinks = document.querySelectorAll('header nav a');
 
@@ -141,7 +147,7 @@ const draw = () => {
   context.fillStyle = 'rgba(0, 0, 0, 0.05)';
   context.fillRect(0, 0, canvas.width, canvas.height);
 
-  context.fillStyle = '#ffae00';
+  context.fillStyle = '--main-color';
   context.font = fontSize + 'px monospace';
 
   for (let i = 0; i < rainDrops.length; i++) {
